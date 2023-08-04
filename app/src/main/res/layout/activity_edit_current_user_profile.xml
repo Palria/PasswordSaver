@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditCurrentUserProfileActivity">
+
+
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/topBar"
+      android:layout_width="match_parent"
+      app:title="Edit Profile"
+      app:titleTextColor="@color/white"
+      android:theme="@style/ToolbarColoredBackArrow"
+      android:background="@color/teal_700"
+      android:layout_height="?attr/actionBarSize"/>
+
+    <TextView
+        android:layout_below="@+id/topBar"
+        android:id="@+id/bg"
+        android:background="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        />
+
+
+
+<ScrollView
+    android:layout_marginTop="-40pt"
+    android:layout_below="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="10pt"
+            android:layout_marginLeft="10pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView1"
+                android:layout_width="60pt"
+                android:layout_height="60pt"
+                android:src="@drawable/default_profile"
+                android:scaleType="fitCenter"
+                app:riv_border_color="@color/teal_700"
+                app:riv_corner_radius="30dip"
+                app:riv_mutate_background="true"
+                app:riv_oval="true" />
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/photoSelectorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="34pt"
+                android:layout_marginTop="-45dp"
+                app:tint="@color/darkIcon"
+                android:background="@drawable/rounded_white_bg"
+                android:layout_marginBottom="10pt"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                />
+    
+            <LinearLayout
+                android:layout_toRightOf="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="6pt"
+                android:layout_marginTop="35pt"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/current_name"
+                    android:text="Fetching"
+                    android:textStyle="bold"
+                    android:textSize="9pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/current_email"
+                    android:text="..."
+                    android:textSize="7pt"
+                    android:maxLines="1"
+                    android:layout_marginTop="3pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="@drawable/rounded_white_bg"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="10pt"
+                android:paddingVertical="15pt"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginBottom="7pt"
+                    android:text="Basic info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:id="@+id/nameInput"
+                        android:background="@drawable/default_input_bg"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textSize="5pt"
+                        android:text="Enter any name of your choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="10pt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:layout_marginTop="1pt"
+                            android:id="@+id/genderSpinner"
+                            android:background="@drawable/default_input_bg"
+                            android:paddingVertical="3pt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="5pt"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/countrySpinner"
+                            android:background="@drawable/default_input_bg"
+                            android:paddingVertical="3pt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginTop="20pt"
+                    android:layout_marginBottom="7pt"
+                    android:text="Contact info"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:hint="Email address"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16sp"
+                        android:enabled="true"
+                        android:id="@+id/emailInput"
+                        android:background="@drawable/default_input_bg"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textSize="5pt"
+                        android:text="Enter your valid and working email for security purposes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="15pt"
+                    android:paddingHorizontal="5pt"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+
+
+                    <Button
+                        android:background="@drawable/default_auth_btn"
+                        style="@style/Widget.Material3.Button.ElevatedButton"
+                        android:layout_weight="1"
+                        android:backgroundTint="@null"
+                        android:id="@+id/cancelButton"
+                        android:text="Cancel"
+                        android:paddingVertical="2pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                    <Button
+                        android:background="@drawable/default_auth_btn"
+                        android:layout_marginLeft="3pt"
+                        android:layout_weight="1"
+                        android:id="@+id/update_button"
+                        android:text="Update"
+                        android:paddingVertical="2pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+</RelativeLayout>

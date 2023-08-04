@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LearnEra" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorPrimaryVariant">@color/teal_200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimationStyle</item>
+    </style>
+    
+    <style name="BottomSheetDialogThemeCustom" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    
+    <style name="AppModalStyle"
+        parent="Widget.Material3.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    
+    </style>
+    
+    <style name="Theme.LearnEra.Fullscreen" parent="Theme.LearnEra">
+        <item name="android:actionBarStyle">@style/Widget.Theme.LearnEra.ActionBar.Fullscreen</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+    
+    <style name="ThemeOverlay.LearnEra.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+    
+    <style name="ToolbarColoredBackArrow" parent="Theme.LearnEra">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+    
+    <style name="LowerCase" parent="Theme.LearnEra">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="WhiteCursorSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="queryBackground">@null</item>
+    </style>
+    <style name="ActivityAnimationStyle"
+        parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@android:anim/slide_in_left</item>
+        <!--        <item name="android:activityOpenExitAnimation">@android:anim/slide_out_right</item>-->
+        <!--        <item name="android:activityCloseEnterAnimation">@android:anim/slide_out_right</item>-->
+        <item name="android:activityCloseExitAnimation">@android:anim/slide_out_right</item>
+    
+    </style>
+</resources>

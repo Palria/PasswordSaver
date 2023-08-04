@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Password Saver</string>
+    
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="other">OTHER</string>
+</resources>

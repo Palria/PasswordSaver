@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ripple_background"
+    android:backgroundTint="@color/gray"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="3dp"
+    android:padding="10dp"
+    >
+<LinearLayout
+    android:id="@+id/topLinearLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    
+    <LinearLayout
+    android:id="@+id/titleLinearLayoutId"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    
+    <TextView
+        android:id="@+id/notesTitleTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    
+    <TextView
+        android:id="@+id/dateAddedTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:maxLength="15"
+        android:maxLines="1"
+        />
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/menuActionButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        />
+    
+
+</LinearLayout>
+    
+    <TextView
+        android:id="@+id/notesDescriptionTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLinearLayoutId"
+        />
+    <Button
+        android:id="@+id/uploadNoteOnlineActionButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/borderlessButtonStyle"
+        android:text="Upload online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notesDescriptionTextViewId"
+        android:visibility="visible"
+        />
+    
+    <ProgressBar
+        android:id="@+id/deleteProgressIndicatorId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/circularProgressIndicatorStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

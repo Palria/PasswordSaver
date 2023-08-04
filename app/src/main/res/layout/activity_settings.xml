@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <include
+        layout="@layout/layout_no_data_found"
+        android:id="@+id/noDataFound"
+        android:visibility="gone"
+        />
+    
+    <LinearLayout
+        android:paddingVertical="6pt"
+        android:id="@+id/topLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/teal_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_marginLeft="5pt"
+            android:layout_marginTop="1pt"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            />
+        
+        
+        <TextView
+            android:id="@+id/declineTextViewId"
+            android:layout_marginLeft="5pt"
+            android:layout_marginTop="1pt"
+            android:text="Settings"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/listLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/topLinearLayoutId"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <TextView
+            android:layout_marginTop="5pt"
+            android:paddingHorizontal="5pt"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:text="Account Verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    <Button
+        style="?attr/borderlessButtonStyle"
+        android:textAlignment="textStart"
+        android:id="@+id/submitActionButtonId"
+        android:text="Submit your account for verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+        <TextView
+            android:layout_marginTop="5pt"
+            android:paddingHorizontal="5pt"
+            android:textStyle="bold"
+            android:textSize="8pt"
+            android:text="Theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <Switch
+        android:id="@+id/visibilitySwitchId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dark Theme"
+        android:layout_marginTop="5pt"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml"
+        android:checked="false"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="10dp"
+        />
+    
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

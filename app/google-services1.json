@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "905269268527",
+    "project_id": "project1-fsaneid",
+    "storage_bucket": "project1fsaneid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905269268527:android:12524434fd456d4b2bf6da",
+        "android_client_info": {
+          "package_name": "com.palria.passwordsaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905269268527-hbtke0ehnmf8nl6nhb2vdh8ejl98b853.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrhG4UUenqL4Q2jFdHzcfc9GetLa5A_28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905269268527-hbtke0ehnmf8nl6nhb2vdh8ejl98b853.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

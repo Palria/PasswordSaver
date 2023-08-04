@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412801317041",
+    "project_id": "anchor-alliance-global",
+    "storage_bucket": "anchor-alliance-global.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412801317041:android:3b3b70847e4ebe1d60ca90",
+        "android_client_info": {
+          "package_name": "com.palria.passwordsaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412801317041-bjok0l63islljsbs68qo7f7vemmc174g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzy2TeUD_l55mdypsvtGZ-9ZOcpiwSF54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412801317041-bjok0l63islljsbs68qo7f7vemmc174g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
